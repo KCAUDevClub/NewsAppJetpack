@@ -4,7 +4,6 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
@@ -25,6 +24,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.newsappjetpack.R
+import com.example.newsappjetpack.ui.theme.black
+import com.example.newsappjetpack.ui.theme.brickred
 
 @Composable
 fun OnBoardView() {
@@ -33,7 +34,7 @@ fun OnBoardView() {
             .background(
                 Brush.horizontalGradient(
                     colors = listOf(
-                        Color.Red, Color.Black
+                        brickred, black
                     )
                 )
             )
@@ -48,7 +49,7 @@ fun OnBoardView() {
                     .background(
                         Brush.horizontalGradient(
                             colors = listOf(
-                                Color.Red, Color.Black
+                              brickred, black
                             )
                         )
                     )
@@ -149,9 +150,6 @@ fun OnBoardView() {
                             .height(30.dp)
                             .width(30.dp)
                             .padding(start = 5.dp)
-                            .background(color = Color.White)
-                            .clip(RoundedCornerShape(12.dp))
-
                     )
                     Icon(
                         painter = painterResource(id = R.drawable.instaicon),
@@ -160,8 +158,6 @@ fun OnBoardView() {
                             .height(30.dp)
                             .width(30.dp)
                             .padding(start = 5.dp)
-                            .background(color = Color.White)
-                            .clip(CircleShape)
                     )
                     Icon(
                         painter = painterResource(id = R.drawable.twittericon),
@@ -170,8 +166,6 @@ fun OnBoardView() {
                             .height(30.dp)
                             .width(30.dp)
                             .padding(start = 5.dp)
-                            .background(color = Color.White)
-                            .clip(CircleShape)
                     )
                     Icon(
                         painter = painterResource(id = R.drawable.facebookicon),
@@ -180,8 +174,6 @@ fun OnBoardView() {
                             .height(30.dp)
                             .width(30.dp)
                             .padding(start = 5.dp)
-                            .border(2.dp, Color.White)
-                            .clip(CircleShape)
                     )
                 }
             }
