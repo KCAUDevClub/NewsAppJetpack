@@ -1,8 +1,10 @@
 package com.example.newsappjetpack.welcome
 
-import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
@@ -28,11 +30,13 @@ import com.example.newsappjetpack.R
 fun OnBoardView() {
     Column(
         modifier = Modifier
-            .background(Brush.horizontalGradient(
-                colors = listOf(
-                    Color.Red, Color.Black
+            .background(
+                Brush.horizontalGradient(
+                    colors = listOf(
+                        Color.Red, Color.Black
+                    )
                 )
-            ))
+            )
             .clip(RoundedCornerShape(8.dp))
             .fillMaxSize()
     ) {
@@ -41,17 +45,25 @@ fun OnBoardView() {
                 modifier = Modifier
                     .clip(RoundedCornerShape(topStart = 80.dp, topEnd = 80.dp))
                     .fillMaxSize()
-                    .background(Brush.horizontalGradient(
-                        colors = listOf(
-                            Color.Red, Color.Black
+                    .background(
+                        Brush.horizontalGradient(
+                            colors = listOf(
+                                Color.Red, Color.Black
+                            )
                         )
-
-                    ))
-                    .padding(20.dp)
-                ,
+                    )
+                    .padding(20.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
+                Spacer(modifier = Modifier.height(20.dp))
+                Image(
+                    painter = painterResource(id = R.drawable.kcau_logo) ,
+                    contentDescription = "logo",
+                    modifier = Modifier
+                        .height(120.dp)
+                        .clip(RoundedCornerShape(12.dp))
+                )
                 Text(
                     text = "NEWS APP",
                     style = TextStyle(
@@ -62,7 +74,7 @@ fun OnBoardView() {
                         textAlign = TextAlign.Center
                     ),
                     modifier = Modifier
-                        .padding(start = 20.dp, top = 100.dp)
+                        .padding(top = 10.dp)
                 )
                 Spacer(modifier = Modifier.height(20.dp))
 
@@ -76,18 +88,20 @@ fun OnBoardView() {
                         fontSize = 40.sp,
                     ),
                     modifier = Modifier
-                        .padding(start = 20.dp, top = 50.dp)
+                        .padding(top = 150.dp)
                 )
 
-            // Sign In Button
-                Spacer(modifier = Modifier.height(100.dp))
+                // Sign In Button
+                Spacer(modifier = Modifier.height(20.dp))
                 Button(
                     colors = ButtonDefaults.buttonColors(
                         backgroundColor = Color.Transparent
                     ),
                     modifier = Modifier
                         .width(240.dp)
-                        .clip(RoundedCornerShape(36.dp)),
+                        .clip(RoundedCornerShape(20.dp))
+                        .border(2.dp, color = Color.White)
+                    ,
                     onClick = { /*TODO*/ }) {
                     Text(
                         text = "SIGN IN",
@@ -104,8 +118,6 @@ fun OnBoardView() {
                     colors = ButtonDefaults.buttonColors(
                         backgroundColor = Color.White
                     ),
-                    border = BorderStroke(2.dp, color = Color.White)
-                    ,
                     modifier = Modifier
                         .width(240.dp)
                         .clip(RoundedCornerShape(36.dp)),
@@ -140,20 +152,23 @@ fun OnBoardView() {
                     Icon(
                         painter = painterResource(id = R.drawable.instaicon),
                         contentDescription = "instagram",
-                        modifier = Modifier.height(30.dp)
+                        modifier = Modifier
+                            .height(30.dp)
                             .padding(start = 5.dp)
 
                     )
                     Icon(
                         painter = painterResource(id = R.drawable.twittericon),
                         contentDescription = "twitter",
-                        modifier = Modifier.height(30.dp)
+                        modifier = Modifier
+                            .height(30.dp)
                             .padding(start = 5.dp)
                     )
                     Icon(
                         painter = painterResource(id = R.drawable.facebookicon),
                         contentDescription = "facebook",
-                        modifier = Modifier.height(30.dp)
+                        modifier = Modifier
+                            .height(30.dp)
                             .padding(start = 5.dp)
                     )
                 }

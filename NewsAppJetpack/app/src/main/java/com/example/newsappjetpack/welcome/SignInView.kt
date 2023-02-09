@@ -122,7 +122,7 @@ fun SignInView() {
                     text = "Forgot Password?",
                     modifier = Modifier.align(Alignment.End),
                     style = TextStyle(
-                        fontWeight = FontWeight.ExtraLight,
+                        fontWeight = FontWeight.SemiBold,
                         fontSize = 16.sp
                     )
                 )
@@ -165,7 +165,7 @@ fun SignInView() {
                     text = "Don't have an account?",
                     modifier = Modifier.align(Alignment.End),
                     style = TextStyle(
-                        fontWeight = FontWeight.ExtraLight,
+                        fontWeight = FontWeight.SemiBold,
                         fontSize = 16.sp
                     )
                 )
