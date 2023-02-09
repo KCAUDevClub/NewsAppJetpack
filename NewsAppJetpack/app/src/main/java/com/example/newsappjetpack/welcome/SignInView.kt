@@ -109,11 +109,26 @@ fun SignInView() {
 //            Forgot Password section
                 Spacer(modifier = Modifier.height(20.dp))
                 Text(
-                    text = "Forgot Password",
+                    text = "Forgot Password?",
                     modifier = Modifier.align(Alignment.End),
                     style = TextStyle(
                         fontWeight = FontWeight.Bold,
                         fontSize = 16.sp
+                    )
+                )
+                // Reset Here
+                ClickableText(
+                    text = AnnotatedString(
+                        "Reset here"
+                    ),
+                    onClick = {
+                        /* TO DO - Add navigation to reset password*/
+                    },
+                    modifier = Modifier.align(Alignment.End),
+                    style = TextStyle(
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 16.sp,
+                        color = Color.Red
                     )
                 )
 //            Sign In Button
@@ -150,7 +165,8 @@ fun SignInView() {
                     modifier = Modifier.align(Alignment.End),
                     style = TextStyle(
                         fontWeight = FontWeight.Bold,
-                        fontSize = 18.sp
+                        fontSize = 16.sp,
+                        color = Color.Red
                     )
                 )
             }

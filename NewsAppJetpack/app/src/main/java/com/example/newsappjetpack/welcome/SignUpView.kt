@@ -12,6 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Outline
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
@@ -36,7 +37,7 @@ fun SignUpView() {
                 .height(200.dp)
         ) {
             Text(
-                text = "Hello \nSign in!",
+                text = "Create Your\nAccount",
                 style = TextStyle(
                     color = Color.White,
                     fontFamily = FontFamily.Monospace,
@@ -58,12 +59,38 @@ fun SignUpView() {
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
+                // Full name
                 OutlinedTextField(
-                    value = "Enter email address",
+                    value = "Enter Name",
                     onValueChange = {},
                     label = {
                         Text(
-                            text = "Gmail",
+                            text = "Full Name",
+                            color = Color.Red,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 14.sp
+                        )
+                    },
+                    trailingIcon = {
+                        IconButton(
+                            onClick = { /*TODO*/ }
+
+                        ) {}
+                        Icon(
+                            imageVector = Icons.Default.Check,
+                            contentDescription = "Check Mark"
+                        )
+                    }
+
+                )
+                // Phone or Gmail
+                Spacer(modifier = Modifier.height(20.dp))
+                OutlinedTextField(
+                    value = "Enter phone or email address",
+                    onValueChange = {},
+                    label = {
+                        Text(
+                            text = "Phone or Gmail",
                             color = Color.Red,
                             fontWeight = FontWeight.Bold,
                             fontSize = 14.sp
@@ -105,23 +132,43 @@ fun SignUpView() {
                         )
                     }
                 )
-//            Forgot Password section
+
+                // Confirm Password
                 Spacer(modifier = Modifier.height(20.dp))
-                Text(
-                    text = "Forgot Password",
-                    modifier = Modifier.align(Alignment.End),
-                    style = TextStyle(
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 16.sp
-                    )
+                OutlinedTextField(
+                    value = "Enter Password",
+                    onValueChange = {},
+                    label = {
+                        Text(
+                            text = "Confirm Password",
+                            color = Color.Red,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 14.sp
+                        )
+                    },
+                    trailingIcon = {
+                        IconButton(
+                            onClick = { /*TODO*/ }
+
+                        ) {}
+                        Icon(
+                            painter = painterResource(id = R.drawable.visibility_off),
+                            contentDescription = ""
+                        )
+                    }
                 )
-//            Sign In Button
+
+//            Sign Up Button
                 Spacer(modifier = Modifier.height(100.dp))
-                Button(modifier = Modifier
-                    .background(color = Color.Red),
-                    onClick = { /*TODO*/ }) {
+                Button(
+                    onClick = { /*TODO*/ },
+                    colors = ButtonDefaults.buttonColors(
+                        backgroundColor = Color.Red
+                    ),
+                    modifier = Modifier.clip(RoundedCornerShape(8.dp))
+                ) {
                     Text(
-                        text = "Sign In",
+                        text = "Sign Up",
                         style = TextStyle(
                             fontWeight = FontWeight.Bold,
                             fontSize = 25.sp,
@@ -132,7 +179,7 @@ fun SignUpView() {
 //                Don't have an account CTA
                 Spacer(modifier = Modifier.height(20.dp))
                 Text(
-                    text = "Don't have an account?",
+                    text = "Already have an account?",
                     modifier = Modifier.align(Alignment.End),
                     style = TextStyle(
                         fontWeight = FontWeight.SemiBold,
@@ -141,7 +188,7 @@ fun SignUpView() {
                 )
                 ClickableText(
                     text = AnnotatedString(
-                        "Sign up"
+                        "Sign In"
                     ),
                     onClick = {
                         // TODO Navigation to Sign Up Screen
@@ -162,5 +209,5 @@ fun SignUpView() {
 @Preview
 @Composable
 fun PreviewSignUp() {
-    SignInView()
+    SignUpView()
 }
