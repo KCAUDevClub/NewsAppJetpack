@@ -12,7 +12,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Outline
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
@@ -52,15 +51,17 @@ fun SignUpView() {
         Box(modifier = Modifier.fillMaxWidth()) {
             Column(
                 modifier = Modifier
-                    .clip(RoundedCornerShape(topStart = 100.dp, topEnd = 100.dp))
+                    .clip(RoundedCornerShape(topStart = 80.dp, topEnd = 80.dp))
                     .fillMaxSize()
                     .background(color = Color.White)
                     .padding(20.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
+
                 // Full name
                 OutlinedTextField(
+                    modifier = Modifier.padding(top = 50.dp),
                     value = "Enter Name",
                     onValueChange = {},
                     label = {
@@ -136,7 +137,7 @@ fun SignUpView() {
                 // Confirm Password
                 Spacer(modifier = Modifier.height(20.dp))
                 OutlinedTextField(
-                    value = "Enter Password",
+                    value = "Re-Enter Password",
                     onValueChange = {},
                     label = {
                         Text(
@@ -159,16 +160,18 @@ fun SignUpView() {
                 )
 
 //            Sign Up Button
-                Spacer(modifier = Modifier.height(100.dp))
+                Spacer(modifier = Modifier.height(40.dp))
                 Button(
                     onClick = { /*TODO*/ },
                     colors = ButtonDefaults.buttonColors(
                         backgroundColor = Color.Red
                     ),
-                    modifier = Modifier.clip(RoundedCornerShape(8.dp))
+                    modifier = Modifier
+                        .width(240.dp)
+                        .clip(RoundedCornerShape(36.dp))
                 ) {
                     Text(
-                        text = "Sign Up",
+                        text = "SIGN UP",
                         style = TextStyle(
                             fontWeight = FontWeight.Bold,
                             fontSize = 25.sp,
@@ -177,7 +180,7 @@ fun SignUpView() {
                     )
                 }
 //                Don't have an account CTA
-                Spacer(modifier = Modifier.height(20.dp))
+                Spacer(modifier = Modifier.height(60.dp))
                 Text(
                     text = "Already have an account?",
                     modifier = Modifier.align(Alignment.End),

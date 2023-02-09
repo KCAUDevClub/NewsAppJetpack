@@ -24,7 +24,6 @@ import com.example.newsappjetpack.R
 
 @Composable
 fun SignInView() {
-//    Text(text = "Hello \n Sign In")
     Column(
         modifier = Modifier
             .background(color = Color.Red)
@@ -52,13 +51,14 @@ fun SignInView() {
         Box(modifier = Modifier.fillMaxWidth()) {
             Column(
                 modifier = Modifier
-                    .clip(RoundedCornerShape(topStart = 100.dp, topEnd = 100.dp))
+                    .clip(RoundedCornerShape(topStart = 80.dp, topEnd = 80.dp))
                     .fillMaxSize()
                     .background(color = Color.White)
                     .padding(20.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
+                Spacer(modifier = Modifier.height(40.dp))
                 OutlinedTextField(
                     value = "Enter email address",
                     onValueChange = {},
@@ -112,7 +112,7 @@ fun SignInView() {
                     text = "Forgot Password?",
                     modifier = Modifier.align(Alignment.End),
                     style = TextStyle(
-                        fontWeight = FontWeight.Bold,
+                        fontWeight = FontWeight.ExtraLight,
                         fontSize = 16.sp
                     )
                 )
@@ -128,13 +128,17 @@ fun SignInView() {
                     style = TextStyle(
                         fontWeight = FontWeight.Bold,
                         fontSize = 16.sp,
-                        color = Color.Red
                     )
                 )
 //            Sign In Button
                 Spacer(modifier = Modifier.height(100.dp))
-                Button(modifier = Modifier
-                    .background(color = Color.Red),
+                Button(
+                    colors = ButtonDefaults.buttonColors(
+                        backgroundColor = Color.Red
+                    ),
+                    modifier = Modifier
+                        .width(240.dp)
+                        .clip(RoundedCornerShape(36.dp)),
                     onClick = { /*TODO*/ }) {
                     Text(
                         text = "Sign In",
@@ -146,18 +150,18 @@ fun SignInView() {
                     )
                 }
 //                Don't have an account CTA
-                Spacer(modifier = Modifier.height(20.dp))
+                Spacer(modifier = Modifier.height(100.dp))
                 Text(
                     text = "Don't have an account?",
                     modifier = Modifier.align(Alignment.End),
                     style = TextStyle(
-                        fontWeight = FontWeight.SemiBold,
+                        fontWeight = FontWeight.ExtraLight,
                         fontSize = 16.sp
                     )
                 )
                 ClickableText(
                     text = AnnotatedString(
-                        "Sign up"
+                        "Sign In"
                     ),
                     onClick = {
                         // TODO Navigation to Sign Up Screen
@@ -166,7 +170,6 @@ fun SignInView() {
                     style = TextStyle(
                         fontWeight = FontWeight.Bold,
                         fontSize = 16.sp,
-                        color = Color.Red
                     )
                 )
             }
