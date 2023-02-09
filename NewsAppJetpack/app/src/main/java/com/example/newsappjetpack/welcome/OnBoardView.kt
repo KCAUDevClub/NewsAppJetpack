@@ -65,7 +65,7 @@ fun OnBoardView() {
                         .clip(RoundedCornerShape(12.dp))
                 )
                 Text(
-                    text = "NEWS APP",
+                    text = "KCAU News App",
                     style = TextStyle(
                         color = Color.White,
                         fontFamily = FontFamily.Monospace,
@@ -76,7 +76,7 @@ fun OnBoardView() {
                     modifier = Modifier
                         .padding(top = 10.dp)
                 )
-                Spacer(modifier = Modifier.height(20.dp))
+                Spacer(modifier = Modifier.height(120.dp))
 
                 // Welcome Back
                 Text(
@@ -86,9 +86,7 @@ fun OnBoardView() {
                         fontFamily = FontFamily.Monospace,
                         fontWeight = FontWeight.Bold,
                         fontSize = 40.sp,
-                    ),
-                    modifier = Modifier
-                        .padding(top = 150.dp)
+                    )
                 )
 
                 // Sign In Button
@@ -139,14 +137,20 @@ fun OnBoardView() {
                         fontWeight = FontWeight.Bold,
                         fontSize = 18.sp,
                         color = Color.White
-                    )
+                    ),
+                    modifier = Modifier.padding(top = 10.dp)
                 )
                 // Social Media Icons
                 Row {
                     Icon(
                         painter = painterResource(id = R.drawable.google),
                         contentDescription = "instagram",
-                        modifier = Modifier.height(30.dp)
+                        modifier = Modifier
+                            .height(30.dp)
+                            .width(30.dp)
+                            .padding(start = 5.dp)
+                            .background(color = Color.White)
+                            .clip(RoundedCornerShape(12.dp))
 
                     )
                     Icon(
@@ -154,22 +158,30 @@ fun OnBoardView() {
                         contentDescription = "instagram",
                         modifier = Modifier
                             .height(30.dp)
+                            .width(30.dp)
                             .padding(start = 5.dp)
-
+                            .background(color = Color.White)
+                            .clip(CircleShape)
                     )
                     Icon(
                         painter = painterResource(id = R.drawable.twittericon),
                         contentDescription = "twitter",
                         modifier = Modifier
                             .height(30.dp)
+                            .width(30.dp)
                             .padding(start = 5.dp)
+                            .background(color = Color.White)
+                            .clip(CircleShape)
                     )
                     Icon(
                         painter = painterResource(id = R.drawable.facebookicon),
                         contentDescription = "facebook",
                         modifier = Modifier
                             .height(30.dp)
+                            .width(30.dp)
                             .padding(start = 5.dp)
+                            .border(2.dp, Color.White)
+                            .clip(CircleShape)
                     )
                 }
             }
