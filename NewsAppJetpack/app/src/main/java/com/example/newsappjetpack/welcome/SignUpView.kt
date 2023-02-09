@@ -24,7 +24,6 @@ import com.example.newsappjetpack.R
 
 @Composable
 fun SignUpView() {
-//    Text(text = "Hello \n Sign In")
     Column(
         modifier = Modifier
             .background(color = Color.Red)
@@ -162,6 +161,6 @@ fun SignUpView() {
 
 @Preview
 @Composable
-fun PreviewSignIn() {
+fun PreviewSignUp() {
     SignInView()
 }
