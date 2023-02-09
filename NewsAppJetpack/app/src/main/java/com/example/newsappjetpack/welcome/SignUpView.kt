@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.AnnotatedString
@@ -26,13 +27,23 @@ import com.example.newsappjetpack.R
 fun SignUpView() {
     Column(
         modifier = Modifier
-            .background(color = Color.Red)
+            .background(Brush.horizontalGradient(
+                colors = listOf(
+                    Color.Red, Color.Black
+                )
+            ))
             .fillMaxSize()
     ) {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(color = Color.Red)
+                .background(
+                    Brush.horizontalGradient(
+                    colors = listOf(
+                        Color.Red, Color.Black
+                    )
+
+                ))
                 .height(200.dp)
         ) {
             Text(
@@ -204,7 +215,6 @@ fun SignUpView() {
                 )
             }
         }
-
     }
 }
 

@@ -1,5 +1,6 @@
 package com.example.newsappjetpack.welcome
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -11,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
@@ -26,7 +28,12 @@ import com.example.newsappjetpack.R
 fun OnBoardView() {
     Column(
         modifier = Modifier
-            .background(color = Color.Red)
+            .background(Brush.horizontalGradient(
+                colors = listOf(
+                    Color.Red, Color.Black
+                )
+            ))
+            .clip(RoundedCornerShape(8.dp))
             .fillMaxSize()
     ) {
         Box(modifier = Modifier.fillMaxWidth()) {
@@ -34,8 +41,14 @@ fun OnBoardView() {
                 modifier = Modifier
                     .clip(RoundedCornerShape(topStart = 80.dp, topEnd = 80.dp))
                     .fillMaxSize()
-                    .background(color = Color.Red)
-                    .padding(20.dp),
+                    .background(Brush.horizontalGradient(
+                        colors = listOf(
+                            Color.Red, Color.Black
+                        )
+
+                    ))
+                    .padding(20.dp)
+                ,
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
@@ -70,7 +83,7 @@ fun OnBoardView() {
                 Spacer(modifier = Modifier.height(100.dp))
                 Button(
                     colors = ButtonDefaults.buttonColors(
-                        backgroundColor = Color.Red
+                        backgroundColor = Color.Transparent
                     ),
                     modifier = Modifier
                         .width(240.dp)
@@ -91,6 +104,8 @@ fun OnBoardView() {
                     colors = ButtonDefaults.buttonColors(
                         backgroundColor = Color.White
                     ),
+                    border = BorderStroke(2.dp, color = Color.White)
+                    ,
                     modifier = Modifier
                         .width(240.dp)
                         .clip(RoundedCornerShape(36.dp)),
@@ -117,20 +132,27 @@ fun OnBoardView() {
                 // Social Media Icons
                 Row {
                     Icon(
-                        painter = painterResource(id = R.drawable.instagram),
+                        painter = painterResource(id = R.drawable.google),
                         contentDescription = "instagram",
                         modifier = Modifier.height(30.dp)
 
                     )
                     Icon(
-                        painter = painterResource(id = R.drawable.twitter),
+                        painter = painterResource(id = R.drawable.instaicon),
                         contentDescription = "instagram",
+                        modifier = Modifier.height(30.dp)
+                            .padding(start = 5.dp)
+
+                    )
+                    Icon(
+                        painter = painterResource(id = R.drawable.twittericon),
+                        contentDescription = "twitter",
                         modifier = Modifier.height(30.dp)
                             .padding(start = 5.dp)
                     )
                     Icon(
-                        painter = painterResource(id = R.drawable.facebook),
-                        contentDescription = "instagram",
+                        painter = painterResource(id = R.drawable.facebookicon),
+                        contentDescription = "facebook",
                         modifier = Modifier.height(30.dp)
                             .padding(start = 5.dp)
                     )
@@ -139,7 +161,6 @@ fun OnBoardView() {
         }
     }
 }
-
 
 @Preview
 @Composable
