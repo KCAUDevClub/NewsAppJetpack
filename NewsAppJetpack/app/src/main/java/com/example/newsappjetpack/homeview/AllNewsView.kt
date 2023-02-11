@@ -46,7 +46,8 @@ fun AllNewsView() {
             // Navigation Items
             LazyRow (
                 modifier = Modifier.padding(start = 10.dp),
-                horizontalArrangement = Arrangement.SpaceEvenly
+                horizontalArrangement = Arrangement.SpaceBetween,
+
                     ) {
                 item {
                     Text(
@@ -167,7 +168,7 @@ fun AllNewsView() {
                                 fontWeight = FontWeight.Bold,
                                 color = white,
                                 modifier = Modifier
-                                    .padding(start = 5.dp, top = 100.dp, end = 5.dp, bottom = 10.dp)
+                                    .padding(start = 20.dp, top = 100.dp, end = 5.dp, bottom = 10.dp)
                             )
                         }
                     }
@@ -219,7 +220,7 @@ fun AllNewsView() {
                                 fontWeight = FontWeight.Bold,
                                 color = white,
                                 modifier = Modifier
-                                    .padding(start = 5.dp, top = 100.dp, end = 5.dp, bottom = 10.dp)
+                                    .padding(start = 20.dp, top = 100.dp, end = 5.dp, bottom = 10.dp)
                             )
                         }
                     }
@@ -266,12 +267,12 @@ fun AllNewsView() {
                                     )
                             }
                             Text(
-                                text = "School of Technology student awarded $ 100,000 for innovation",
+                                text = "School of Technology student awarded $100,000 prize",
                                 fontSize = 25.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = white,
                                 modifier = Modifier
-                                    .padding(start = 5.dp, top = 100.dp, end = 5.dp, bottom = 10.dp)
+                                    .padding(start = 20.dp, top = 100.dp, end = 5.dp, bottom = 10.dp)
                             )
                         }
                     }
