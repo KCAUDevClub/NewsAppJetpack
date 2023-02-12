@@ -56,7 +56,8 @@ fun AllNewsView() {
                             fontWeight = FontWeight.Bold,
                             fontSize = 16.sp,
                             textAlign = TextAlign.Start
-                        )
+                        ),
+                        modifier = Modifier.padding(all = 5.dp)
                     )
                 }
                 item {
@@ -66,7 +67,8 @@ fun AllNewsView() {
                             fontWeight = FontWeight.Bold,
                             fontSize = 16.sp,
                             textAlign = TextAlign.Start
-                        )
+                        ),
+                        modifier = Modifier.padding(all = 5.dp)
                     )
                 }
                 item {
@@ -76,7 +78,8 @@ fun AllNewsView() {
                             fontWeight = FontWeight.Bold,
                             fontSize = 16.sp,
                             textAlign = TextAlign.Start
-                        )
+                        ),
+                        modifier = Modifier.padding(all = 5.dp)
                     )
                 }
                 item {
@@ -86,7 +89,8 @@ fun AllNewsView() {
                             fontWeight = FontWeight.Bold,
                             fontSize = 16.sp,
                             textAlign = TextAlign.Start
-                        )
+                        ),
+                        modifier = Modifier.padding(all = 5.dp)
                     )
                 }
                 item {
@@ -96,7 +100,8 @@ fun AllNewsView() {
                             fontWeight = FontWeight.Bold,
                             fontSize = 16.sp,
                             textAlign = TextAlign.Start
-                        )
+                        ),
+                        modifier = Modifier.padding(all = 5.dp)
                     )
                 }
                 item {
@@ -106,7 +111,8 @@ fun AllNewsView() {
                             fontWeight = FontWeight.Bold,
                             fontSize = 16.sp,
                             textAlign = TextAlign.Start
-                        )
+                        ),
+                        modifier = Modifier.padding(all = 5.dp)
                     )
                 }
                 item {
@@ -116,7 +122,8 @@ fun AllNewsView() {
                             fontWeight = FontWeight.Bold,
                             fontSize = 16.sp,
                             textAlign = TextAlign.Start
-                        )
+                        ),
+                        modifier = Modifier.padding(all = 5.dp)
                     )
                 }
             }
